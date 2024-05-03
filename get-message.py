@@ -18,10 +18,7 @@ response = sqs.receive_message(
     ]
 )
 
-print(response['Messages'][0]['ReceiptHandle'])
+print(response['Messages'][0]['Body'])
 print(response)
 
 handle = response['Messages'][0]['ReceiptHandle']
-
-
-
